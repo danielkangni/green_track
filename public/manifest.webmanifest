@@ -1,0 +1,10 @@
+{
+  "name": "GreenTrack — ANAP",
+  "short_name": "GreenTrack",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f2ea",
+  "theme_color": "#0f3b2c",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
