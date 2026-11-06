@@ -243,8 +243,12 @@ export function render(el, [initialId]) {
           <div style="flex:1"><h3 style="font-size:18px">${esc(sp.name)}</h3><div class="small muted"><i>${esc(sp.scientific)}</i></div></div>
           <span class="mono muted">${p.id}</span>
         </div>
-        <div style="margin:10px 0 6px">${gauge(d.index, d.level)}</div>
-        <div class="reco ${d.level.key}">${icon(d.level.key === 'ok' ? 'check' : d.level.key === 'watch' ? 'eye' : 'drop')}<div><strong>${d.level.label}${d.liters ? ` · ~${d.liters} L` : ''}</strong><p>${esc(d.explanation)}</p></div></div>
+        ${p.sensor.online ? `<div style="margin:10px 0 6px">${gauge(d.index, d.level)}</div>` : ''}
+        ${
+          p.sensor.online
+            ? `<div class="reco ${d.level.key}">${icon(d.level.key === 'ok' ? 'check' : d.level.key === 'watch' ? 'eye' : 'drop')}<div><strong>${d.level.label}${d.liters ? ` · ~${d.liters} L` : ''}</strong><p>${esc(d.explanation)}</p></div></div>`
+            : `<div class="reco watch">${icon('cpu')}<div><strong>Capteur hors ligne</strong><p>Plus de mesure depuis plus de 6 h : un agent doit vérifier le capteur ${esc(p.sensor.id)}.</p></div></div>`
+        }
         <div class="facts" style="margin-top:8px">
           <div><small>Humidité sol</small><b>${p.reading.moisture.toFixed(1)} %</b></div>
           <div><small>Optimum espèce</small><b>${sp.optimal} %</b></div>
