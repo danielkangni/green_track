@@ -81,7 +81,7 @@ Intègre `presentation/video/greentrack-demo.mp4` sur sa propre diapositive (« 
 | 1:21 | Montage du capteur : simulation du circuit, vanne qui s’ouvre |
 | 1:38 | Liste du matériel, version Tinkercad |
 
-Si une publicité courte (environ 20 s) a été produite dans `videos/`, ajoute-la en ouverture ou en clôture, selon mon choix.
+Ajoute aussi la **publicité de 20 s** `presentation/video/greentrack-pub-1080p-web.mp4` (avec le son, voix off française). Place-la en ouverture, juste après le titre, ou en clôture, selon mon choix ; par défaut, en ouverture. Son image d’aperçu est `videos/greentrack-pub/miniature-1920x1080.jpg`.
 
 ## Plan de la présentation (14 diapositives)
 
