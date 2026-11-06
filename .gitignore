@@ -2,5 +2,12 @@ node_modules/
 dist/
 .DS_Store
 *.log
-videos/*/out/
-videos/*/audio/
+.env
+# kit Mavena (produit acheté) et fichiers de travail : seuls les livrables sont versionnés
+videos/*/*
+!videos/*/NOTICE.md
+!videos/*/miniature-1920x1080.jpg
+!videos/*/storyboard-*.jpg
+!videos/*/audio/
+videos/*/audio/*
+!videos/*/audio/script.json
